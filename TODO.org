@@ -1,0 +1,3 @@
+* TODO [Bug] Emacs 27 incompatibilities
+
+They removed the last optional argument from =window--display-buffer=.
