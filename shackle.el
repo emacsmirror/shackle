@@ -1,9 +1,9 @@
 ;;; shackle.el --- Enforce rules for popups
 
-;; Copyright (C) 2014-2016 Vasilij Schneidermann <v.schneidermann@gmail.com>
+;; Copyright (C) 2014 Vasilij Schneidermann <mail@vasilij.de>
 
-;; Author: Vasilij Schneidermann <v.schneidermann@gmail.com>
-;; URL: https://github.com/wasamasa/shackle
+;; Author: Vasilij Schneidermann <mail@vasilij.de>
+;; URL: https://depp.brause.cc/shackle
 ;; Version: 1.0.3
 ;; Keywords: convenience
 ;; Package-Requires: ((cl-lib "0.5"))
@@ -30,8 +30,7 @@
 ;; This global minor mode allows you to easily set up rules for
 ;; popups in Emacs.
 
-;; See the README for more info:
-;; https://github.com/wasamasa/shackle
+;; See the README for more info: https://depp.brause.cc/shackle
 
 ;;; Code:
 
