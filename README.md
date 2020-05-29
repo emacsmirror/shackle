@@ -49,7 +49,7 @@ The following key-value pairs are available:
   Special buffers usually have `q` bound to `quit-window` which
   commonly buries the buffer *and* deletes the window.  This option
   inhibits the latter which is especially useful in combination with
-  `:same` (as `q` deleting the reused window is weird behaviour for
+  `:same` (as `q` deleting the reused window is weird behavior for
   more than one visible window), but can also be used with other keys
   like `:other` as well.
 
@@ -186,7 +186,7 @@ be the case:
 
 ## Examples
 
-The following example configuration enables the rather radical behaviour
+The following example configuration enables the rather radical behavior
 of always reusing the current window in order to avoid unwanted window
 splitting:
 
@@ -258,8 +258,8 @@ obviously exceptions to this rule.  For example
 `find-function-at-point` ends up displaying a file buffer containing
 the function definition in another window, but you can't infer this
 from that buffer alone.  The simple workaround is just replacing
-`find-function-at-point` with something directly using your prefered
-flavour of `display-buffer`.  If you're hell-bent on making it work
+`find-function-at-point` with something directly using your preferred
+flavor of `display-buffer`.  If you're hell-bent on making it work
 with `shackle` though, you could check whether using custom
 conditions/actions works for you.  In case they aren't enough, advise
 the function displaying the buffer to alter it so that it can be

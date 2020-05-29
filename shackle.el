@@ -130,7 +130,7 @@ actions, but by your own conditions.
 
 :inhibit-window-quit and t
 
-Modify the behaviour of `quit-window' to not delete the window.
+Modify the behavior of `quit-window' to not delete the window.
 This option is recommended in combination with :same, but can be
 used with other keys like :other as well.  Customize
 `shackle-inhibit-window-quit-on-same-windows' to make this the
