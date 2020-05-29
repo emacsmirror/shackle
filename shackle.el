@@ -124,9 +124,10 @@ default for windows already displaying the buffer.
 :custom and a function name or lambda
 
 Override with a custom action.  Takes a function as argument
-which is called with BUFFER-OR-NAME, ALIST and PLIST as argument.
-This mode of operation allows you to pick one of the existing
-actions, but by your own conditions.
+which is called with BUFFER-OR-NAME, ALIST and PLIST as argument
+and must return the window to be displayed or nil to inhibit its
+display.  This mode of operation allows you to pick one of the
+existing actions, but by your own conditions.
 
 :inhibit-window-quit and t
 
@@ -423,7 +424,11 @@ the :size key with a number value."
 Displays BUFFER according to ALIST and PLIST."
   (cond
    ((plist-get plist :custom)
-    (funcall (plist-get plist :custom) buffer alist plist))
+    (let* ((action (plist-get plist :custom))
+           (window (funcall action buffer alist plist)))
+      (when (and window (not (windowp window)))
+        (user-error "Custom action didn't return window: %S %S" window action))
+      window))
    ((plist-get plist :ignore) 'fail)
    ((shackle--display-buffer-reuse buffer alist))
    ((or (plist-get plist :same)

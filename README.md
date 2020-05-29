@@ -56,9 +56,10 @@ The following key-value pairs are available:
 - `:custom` and a function name or lambda expression:
 
   Override with a custom action.  The specified function is called
-  with `BUFFER-OR-NAME`, `ALIST` and `PLIST` as argument.  It's
-  possible to reuse existing actions as defined in the sources, but
-  dispatch based on more specific conditions such as the currently
+  with `BUFFER-OR-NAME`, `ALIST` and `PLIST` as argument and must
+  return the window to be displayed or `nil` to inhibit its display.
+  It's possible to reuse existing actions as defined in the sources,
+  but dispatch based on more specific conditions such as the currently
   opened windows or selected buffer.
 
 - `:ignore` and `t`:
