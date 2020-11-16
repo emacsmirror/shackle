@@ -228,6 +228,16 @@ It's a plist with the same keys and values as described in
                           ((const :tag "Frame" :frame) boolean)))
   :group 'shackle)
 
+(defcustom shackle-display-buffer-frame-function
+  'shackle--display-buffer-frame
+  "Handler function for `:frame t'.
+
+This function will receive the same (BUFFER ALIST PLIST) as
+`shackle-display-buffer', which see.  It should return the window
+displaying BUFFER, or 'fail if it hasn't displayed it."
+  :type 'function
+  :group 'shackle)
+
 (defun shackle--match (buffer-or-name condition plist)
   "Internal match function.
 Used by `shackle-match', when BUFFER-OR-NAME matches CONDITION,
@@ -441,7 +451,7 @@ Displays BUFFER according to ALIST and PLIST."
                   (not (cdr (assq 'inhibit-same-window alist))))))
     (shackle--display-buffer-same buffer alist))
    ((plist-get plist :frame)
-    (shackle--display-buffer-frame buffer alist plist))
+    (funcall shackle-display-buffer-frame-function buffer alist plist))
    ((plist-get plist :align)
     (shackle--display-buffer-aligned-window buffer alist plist))
    (t
