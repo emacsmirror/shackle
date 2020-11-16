@@ -9,10 +9,9 @@ everything reuse your currently selected window.
 
 ## Installation
 
-Install from [Marmalade] or [MELPA (stable)] via `M-x package-install
-RET shackle` or download `shackle.el`, place it into a suitable
-location such as `~/.emacs.d/vendor/` and add the following to your
-init file:
+Install from [MELPA (stable)] via `M-x package-install RET shackle` or
+download `shackle.el`, place it into a suitable location such as
+`~/.emacs.d/vendor/` and add the following to your init file:
 
     (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/"))
 
@@ -277,7 +276,6 @@ sensible default configuration and having more options for
 customizing, give `popwin` a try.
 
 [image]: img/shackle.gif
-[Marmalade]: https://marmalade-repo.org/
 [MELPA (stable)]: http://melpa.org/
 [Helm]: https://github.com/emacs-helm/helm
 [Magit]: http://github.com/magit/magit
