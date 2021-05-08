@@ -6,7 +6,7 @@
 ;; URL: https://depp.brause.cc/shackle
 ;; Version: 1.0.3
 ;; Keywords: convenience
-;; Package-Requires: ((cl-lib "0.5"))
+;; Package-Requires: ((emacs "24.3") (cl-lib "0.5"))
 
 ;; This file is NOT part of GNU Emacs.
 
